@@ -73,7 +73,7 @@ EOF
 # Start PostgreSQL.
 systemctl enable --now postgresql
 
-# Create the dedicated Linux service account FIRST (Correction ici)
+# Create the dedicated Linux service account FIRST
 if ! id "$SONAR_USER" &>/dev/null; then
     groupadd --system "$SONAR_USER"
     useradd --system \
